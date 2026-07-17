@@ -1,6 +1,6 @@
 # RAG Teaching Assistant
 
-An AI-powered teaching assistant that transforms lecture videos into a searchable knowledge base using Retrieval-Augmented Generation (RAG). The system transcribes lecture videos with OpenAI Whisper, generates semantic embeddings using BGE-M3, stores them locally using Joblib, and retrieves the most relevant lecture content to generate accurate, context-aware answers using DeepSeek-R1.
+An AI-powered teaching assistant that transforms lecture videos into a searchable knowledge base using Retrieval-Augmented Generation (RAG). The system transcribes lecture videos with OpenAI Whisper, generates semantic embeddings using BGE-M3, stores them locally using Joblib, and retrieves the most relevant lecture content to generate accurate, context-aware answers using Llama 3.2.
 
 Instead of manually searching through hours of lecture videos, users can ask questions in natural language and receive precise answers grounded in the lecture content, along with the corresponding lecture number and timestamp.
 
@@ -13,7 +13,7 @@ Instead of manually searching through hours of lecture videos, users can ask que
 - 🧠 Generate embeddings using BGE-M3
 - 🗄️ Store embeddings locally using Joblib
 - 🔍 Retrieve relevant lecture chunks using semantic similarity search
-- 🤖 Generate context-aware responses using DeepSeek-R1
+- 🤖 Generate context-aware responses using Llama 3.2
 - 📚 Answer questions across multiple lecture videos
 - ⏱️ Return lecture number and timestamp with every answer
 
@@ -52,7 +52,7 @@ Instead of manually searching through hours of lecture videos, users can ask que
 📚 Retrieved Chunks
         │
         ▼
-🤖 DeepSeek-R1
+🤖 Llama 3.2
         │
         ▼
 💬 Final Answer
@@ -122,7 +122,7 @@ Timestamp      : 487s - 489s
 
 - OpenAI Whisper
 - BGE-M3 Embedding Model
-- DeepSeek-R1
+- Llama 3.2
 
 ### stores embedding locally using Joblib
 
@@ -189,7 +189,7 @@ When a user asks a question, the query is converted into an embedding. The syste
 
 ### Step 6 — Response Generation
 
-The retrieved chunks are provided as context to DeepSeek-R1, which generates an accurate answer grounded in the lecture content.
+The retrieved chunks are provided as context to Llama 3.2, which generates an accurate answer grounded in the lecture content.
 
 ---
 

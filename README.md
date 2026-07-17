@@ -1,6 +1,6 @@
 # RAG Teaching Assistant
 
-An AI-powered teaching assistant that transforms lecture videos into a searchable knowledge base using Retrieval-Augmented Generation (RAG). The system transcribes lecture videos with OpenAI Whisper, generates semantic embeddings using BGE-M3, stores them in a FAISS vector database, and retrieves the most relevant lecture content to generate accurate, context-aware answers using DeepSeek-R1.
+An AI-powered teaching assistant that transforms lecture videos into a searchable knowledge base using Retrieval-Augmented Generation (RAG). The system transcribes lecture videos with OpenAI Whisper, generates semantic embeddings using BGE-M3, stores them locally using Joblib, and retrieves the most relevant lecture content to generate accurate, context-aware answers using DeepSeek-R1.
 
 Instead of manually searching through hours of lecture videos, users can ask questions in natural language and receive precise answers grounded in the lecture content, along with the corresponding lecture number and timestamp.
 
@@ -11,7 +11,7 @@ Instead of manually searching through hours of lecture videos, users can ask que
 - 🎥 Convert lecture videos into text using OpenAI Whisper
 - ✂️ Split transcripts into semantic chunks
 - 🧠 Generate embeddings using BGE-M3
-- 🗄️ Store embeddings in a FAISS vector database
+- 🗄️ Store embeddings locally using Joblib
 - 🔍 Retrieve relevant lecture chunks using semantic similarity search
 - 🤖 Generate context-aware responses using DeepSeek-R1
 - 📚 Answer questions across multiple lecture videos
@@ -37,7 +37,7 @@ Instead of manually searching through hours of lecture videos, users can ask que
 🧠 BGE-M3 Embeddings
         │
         ▼
-🗄️ FAISS Vector Database
+🗄️ stores them locally using Joblib
         ▲
         │
 ❓ User Question
@@ -124,9 +124,7 @@ Timestamp      : 487s - 489s
 - BGE-M3 Embedding Model
 - DeepSeek-R1
 
-### Vector Database
-
-- FAISS
+### stores embedding locally using Joblib
 
 ### Libraries
 
@@ -183,7 +181,7 @@ Each chunk is converted into a dense vector representation using the BGE-M3 embe
 
 ### Step 4 — Vector Storage
 
-The generated embeddings are stored in a FAISS vector database for efficient semantic similarity search.
+The generated embeddings stored locally using Joblib
 
 ### Step 5 — Retrieval
 

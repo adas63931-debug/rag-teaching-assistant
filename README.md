@@ -137,29 +137,24 @@ Timestamp      : 487s - 489s
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 
-```
+```text
 rag-teaching-assistant/
 │
-├── data/
-│   ├── videos/
-│   ├── transcripts/
-│   ├── chunks/
-│   └── embeddings/
-│
 ├── src/
-│   ├── video_to_text.py
-│   ├── chunking.py
-│   ├── embedding.py
-│   ├── vector_store.py
-│   ├── retrieval.py
-│   ├── rag_pipeline.py
-│   └── inference.py
+│   ├── video_to_mp3.py         # Convert lecture videos to MP3
+│   ├── mp3_to_json.py          # Transcribe audio using OpenAI Whisper
+│   ├── preprocess_json.py      # Chunk transcripts and prepare metadata
+│   └── process_incoming.py     # Generate embeddings, retrieve relevant chunks, and answer queries
 │
-├── requirements.txt
-├── README.md
-└── main.py
+├── data/
+│   └── jsons/                  # Sample processed transcript JSON files
+│
+├── .gitignore                  # Ignore virtual environment and generated files
+├── LICENSE                     # MIT License
+├── README.md                   # Project documentation
+└── requirements.txt            # Python dependencies
 ```
 
 ---

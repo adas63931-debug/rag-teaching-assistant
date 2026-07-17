@@ -1,9 +1,6 @@
 # RAG Teaching Assistant
 
-An AI-powered teaching assistant that transforms lecture videos into a searchable knowledge base using Retrieval-Augmented Generation (RAG). The system transcribes lecture videos with OpenAI Whisper, generates semantic embeddings using BGE-M3, stores them locally using Joblib, and retrieves the most relevant lecture content to generate accurate, context-aware answers using Llama 3.2.
-
-Instead of manually searching through hours of lecture videos, users can ask questions in natural language and receive precise answers grounded in the lecture content, along with the corresponding lecture number and timestamp.
-
+AI-powered RAG system that answers lecture questions using Whisper, BGE-M3 embeddings, semantic search, and Llama 3.2
 ---
 
 ## Features

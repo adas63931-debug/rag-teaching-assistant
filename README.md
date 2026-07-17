@@ -8,8 +8,9 @@ AI-powered RAG system that answers lecture questions using Whisper, BGE-M3 embed
 - 🎥 Convert lecture videos into text using OpenAI Whisper
 - ✂️ Split transcripts into semantic chunks
 - 🧠 Generate embeddings using BGE-M3
-- 🗄️ Store embeddings locally using Joblib
-- 🔍 Retrieve relevant lecture chunks using semantic similarity search
+- 🗄️ Store precomputed embeddings locally using Joblib
+- 🔍 Retrieve the most relevant lecture chunks using cosine similarity
+- 📝 Construct context-aware prompts for the language model
 - 🤖 Generate context-aware responses using Llama 3.2
 - 📚 Answer questions across multiple lecture videos
 - ⏱️ Return lecture number and timestamp with every answer
@@ -111,25 +112,14 @@ Timestamp      : 487s - 489s
 
 ## Tech Stack
 
-### Programming Language
-
-- Python
-
-### AI Models
-
-- OpenAI Whisper
-- BGE-M3 Embedding Model
-- Llama 3.2
-
-### stores embedding locally using Joblib
-
-### Libraries
-
-- NumPy
-- Pandas
-- Requests
-- FFmpeg
-
+- **Programming Language:** Python
+- **Speech-to-Text:** OpenAI Whisper
+- **Embedding Model:** BGE-M3
+- **Large Language Model (LLM):** Llama 3.2 (via Ollama)
+- **Retrieval Method:** Cosine Similarity
+- **Embedding Storage:** Joblib
+- **Audio Processing:** FFmpeg
+- **Libraries:** NumPy, Pandas, Scikit-learn, Requests
 ---
 
 ## 📂 Project Structure

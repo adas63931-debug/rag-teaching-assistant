@@ -68,7 +68,6 @@ for json_file in jsons:
 
 df = pd.DataFrame.from_records(my_dicts)
 
-# print(df)
 
 # Save this data frame
 joblib.dump(df, 'embeddings.joblib')
